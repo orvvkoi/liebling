@@ -176,7 +176,6 @@ into the {body} of the default.hbs template --}}
           </div>
         </section>
         {{!-- If you want to embed comments, this is a good place to do it! --}}
-        {{!--
           <section class="m-comments">
             <div class="m-load-comments__iframe l-wrapper in-comments js-comments-iframe">
               <div id="disqus_thread"></div>
@@ -187,14 +186,13 @@ into the {body} of the default.hbs template --}}
                 };
                 (function () {
                   var d = document, s = d.createElement('script');
-                  s.src = 'https://CHANGETHIS.disqus.com/embed.js';
+                  s.src = 'https://stackmonolog.disqus.com/embed.js';
                   s.setAttribute('data-timestamp', +new Date());
                   (d.head || d.body).appendChild(s);
                 })();
               </script>
             </div>
           </section>
-        --}}
       {{/post}}
       {{!-- Related posts --}}
       {{#if post.tags.length}}
