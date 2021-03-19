@@ -24,7 +24,53 @@
 
     {{!-- Styles & Scripts --}}
 
-    <link rel="stylesheet" type="text/css" href="{{asset "css/font.css"}}" media="screen" />
+    <style>
+        /* noto-sans-kr-regular - latin_korean */
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 400;
+            src: local(''),
+            url("{{asset 'fonts/noto-sans/noto-sans-kr-v13-latin_korean-regular.woff2'}}") format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("{{asset 'fonts/noto-sans/noto-sans-kr-v13-latin_korean-regular.woff'}}") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+
+        /* noto-sans-kr-500 - latin_korean */
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 500;
+            src: local(''),
+            url("{{asset 'fonts/noto-sans/noto-sans-kr-v13-latin_korean-500.woff2'}}") format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("{{asset 'fonts/noto-sans/noto-sans-kr-v13-latin_korean-500.woff'}}") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+
+        /* noto-sans-kr-700 - latin_korean */
+        @font-face {
+            font-family: 'Noto Sans KR';
+            font-style: normal;
+            font-weight: 700;
+            src: local(''),
+            url("{{asset 'fonts/noto-sans/noto-sans-kr-v13-latin_korean-700.woff2'}}") format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("{{asset 'fonts/noto-sans/noto-sans-kr-v13-latin_korean-700.woff'}}") format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+
+
+        /* iconmoon */
+        @font-face {
+            font-family: 'icomoon';
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+            src: url("{{asset 'fonts/icomoon/icomoon.eot?101fc3'}}");
+            src: url("{{asset 'fonts/icomoon/icomoon.eot?101fc3#iefix'}}") format('embedded-opentype'),
+            url("{{asset 'fonts/icomoon/icomoon.ttf?101fc3'}}") format('truetype'),
+            url("{{asset 'fonts/icomoon/icomoon.woff?101fc3'}}") format('woff'),
+            url("{{asset 'fonts/icomoon/icomoon.svg?101fc3#icomoon'}}") format('svg');
+        }
+
+
+    </style>
     <link rel="stylesheet" type="text/css" href="{{asset "css/app.css"}}" media="screen" />
 
     {{!-- This #block helper will inject a stylesheet for a specific page --}}

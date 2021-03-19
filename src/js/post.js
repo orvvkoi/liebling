@@ -187,6 +187,26 @@ $(document).ready(() => {
 
   window.addEventListener('scroll', onScrolling, { passive: true })
   window.addEventListener('resize', onResizing, { passive: true })
+
+  // Detect if we have code tags on the page.
+  let codeElement =  document.querySelector("pre > code");
+  if (typeof(codeElement) != 'undefined' && codeElement != null)
+  {
+    // Create CSS Element
+    let prismCSS = document.createElement('link');
+    prismCSS.rel = "stylesheet";
+    prismCSS.type = "text/css";
+    prismCSS.href = "/assets/prism/prism.css?v=1"
+
+    // Create PrismJS Element
+    let prismScript = document.createElement('script');
+    prismScript.type='text/javascript';
+    prismScript.src="/assets/prism/prism.js?v=1";
+
+    // Load script and css in the DOM
+    document.head.appendChild(prismCSS);
+    document.head.appendChild(prismScript);
+  }
 })
 
 $(window).on('load', () => {
