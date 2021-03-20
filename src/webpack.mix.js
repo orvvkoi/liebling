@@ -36,7 +36,7 @@ mix.js('js/helpers.js', 'js/')
   })
   .copy('sass/fonts/icomoon/*.*', '../assets/fonts/icomoon/')
   .copyDirectory('sass/fonts/noto-sans/', '../assets/fonts/noto-sans/')
-  .copy('js/vendor/content-api.min.js', '../assets/js/vendor/')
+  .copy('js/vendor/*.*', '../assets/js/vendor/')
   .browserSync({
     proxy: "localhost:2368",
     files: [
