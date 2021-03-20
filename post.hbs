@@ -84,7 +84,7 @@ into the {body} of the default.hbs template --}}
           </div>
         </div>
         {{!-- Email subscribe form at the bottom of the page --}}
-        {{#if @labs.subscribers}}
+        {{!-- #if @labs.subscribers}}
           <section class="m-subscribe-section">
             <div class="l-wrapper in-post">
               <div class="m-subscribe-section__content">
@@ -108,8 +108,8 @@ into the {body} of the default.hbs template --}}
               </div>
             </div>
           </section>
-        {{/if}}
-        {{#if @labs.members}}
+        {{/if --}}
+        {{!-- #if @labs.members}}
           <section class="m-subscribe-section">
             <div class="l-wrapper in-post">
               <div class="m-subscribe-section__content">
@@ -125,7 +125,9 @@ into the {body} of the default.hbs template --}}
               </div>
             </div>
           </section>
-        {{/if}}
+        {{/if--}}
+
+          {{!--
         <section class="m-author">
           <div class="m-author__content">
             <div class="m-author__picture">
@@ -175,6 +177,8 @@ into the {body} of the default.hbs template --}}
             </div>
           </div>
         </section>
+        --}}
+
         {{!-- If you want to embed comments, this is a good place to do it! --}}
           <section class="m-comments">
             <div class="m-load-comments__iframe l-wrapper in-comments js-comments-iframe">
