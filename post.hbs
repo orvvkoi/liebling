@@ -23,17 +23,12 @@ into the {body} of the default.hbs template --}}
 {{/post}}
 
 <main class="main-wrap">
-  {{#post}}
-    {{!-- Inject styles of the hero image to make it responsive --}}
-    {{> hero background=feature_image}}
-    </section>
-  {{/post}}
-  
+
   <article>
     <div class="l-content in-post">
       {{!-- Everything inside the #post tags pulls data from the post --}}
       {{#post}}
-        <div class="l-wrapper in-post {{#unless feature_image}}no-image{{/unless}} js-aos-wrapper" data-aos="fade-up"
+        <div class="l-wrapper in-post no-image} js-aos-wrapper" data-aos="fade-up"
           data-aos-delay="300">
           <div
             class="l-post-content js-progress-content">
@@ -66,6 +61,13 @@ into the {body} of the default.hbs template --}}
                   </button>
                 </div>
               </div>
+
+              {{#has tag="#includefeatureimage"}}
+                {{#if feature_image}}
+                  <img class="kg-image js-zoomable medium-zoom-image" src="{{img_url feature_image size="m"}}" loading="lazy" alt="">
+                {{/if}}
+              {{/has}}
+
               {{content}}
               {{!-- List of tags  --}}
               {{#if tags}}
