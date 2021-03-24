@@ -40,9 +40,11 @@ into the {body} of the default.hbs template --}}
         {{#get 'tags' limit='all' include='count.posts'}}
           {{#foreach tags}}
             <div class="m-tag-card">
-              <a href="{{url}}" class="m-tag-card__link {{#unless feature_image}}no-picture{{/unless}}" aria-label="{{name}}">
+              <a href="{{url}}" class="m-tag-card__link" aria-label="{{name}}">
                 {{#if feature_image}}
                   <img class="m-tag-card__picture" src="{{img_url feature_image size="m"}}" loading="lazy" alt="">
+                {{else}}
+                  <img class="m-tag-card__picture" src="{{asset "images/default-feature-image.jpg"}}" loading="lazy" alt="">
                 {{/if}}
                 <div class="m-tag-card__info {{#unless feature_image}}no-picture{{/unless}}">
                   <h4 class="m-tag-card__name">{{name}}</h4>
